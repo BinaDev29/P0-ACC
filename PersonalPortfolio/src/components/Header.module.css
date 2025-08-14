@@ -1,0 +1,105 @@
+/* src/components/Header/Header.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navList a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navList a:hover {
+  color: #007bff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #555;
+}
+
+/* ለሞባይል እይታ */
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+  }
+
+  .navMenu.open {
+    display: flex;
+    padding: 1rem 0;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .navList li {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .socialLinks {
+    display: none; /* በሞባይል ላይም ቢሆን ማጥፋቱ ተገቢ ነው */
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

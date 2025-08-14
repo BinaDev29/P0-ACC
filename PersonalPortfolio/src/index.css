@@ -1,0 +1,32 @@
+/* src/index.css */
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* ለጠቅላላው ገጽ የሚሆን ንጹህ ግራጫ ቀለም */
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ለገጹ መሀል ላይ እንዲሆን የሚሆን መሰረታዊ ዲዛይን */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+html {
+  scroll-behavior: smooth; /* ገጾችን ስትቀያይር በሰላም እንዲያልፍ ያደርጋል */
+}

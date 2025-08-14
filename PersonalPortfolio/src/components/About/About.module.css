@@ -1,0 +1,150 @@
+/* src/components/About/About.module.css */
+
+* {
+  box-sizing: border-box;
+}
+
+.aboutSection {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative; /* ለመስመሩ አቀማመጥ እንድናስተካክል */
+}
+
+/* ይህ ኮድ ከርዕሱ ስር መስመር ለመጨመር ያገለግላል */
+.heading::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: -15px; /* ከርዕሱ በታች እንዲቀመጥ */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* New section for description paragraphs */
+.descriptionSection {
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.skillsAndImageContainer {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.skills {
+  flex: 1;
+}
+
+.skillsHeading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skillName {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.progressBar {
+  width: 100%;
+  height: 25px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  transition: width 1s ease-in-out;
+  border-radius: 5px;
+}
+
+.percentage {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.aboutImage {
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  border-radius: 10%;
+  margin-top: 30px;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+}
+
+@media (max-width: 768px) {
+  .skillsAndImageContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imageContainer {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
