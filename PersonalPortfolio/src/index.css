@@ -7,7 +7,7 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f2f5; /* ለጠቅላላው ገጽ የሚሆን ንጹህ ግራጫ ቀለም */
+  background-color: #f0f2f5; 
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,5 +28,5 @@ main {
 }
 
 html {
-  scroll-behavior: smooth; /* ገጾችን ስትቀያይር በሰላም እንዲያልፍ ያደርጋል */
+  scroll-behavior: smooth; 
 }

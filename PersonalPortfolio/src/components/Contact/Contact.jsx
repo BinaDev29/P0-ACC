@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Contact Us</h2>
+        <h2 className={styles.heading}>Contact Me</h2>
         <p className={styles.subheading}>
           I'm always open to new opportunities and collaborations. Feel free to reach out to me
           for any questions, project ideas, or just to say hello! I will do my best to get back to you as soon as possible.

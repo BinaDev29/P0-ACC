@@ -1,9 +1,5 @@
 /* src/components/About/About.module.css */
 
-* {
-  box-sizing: border-box;
-}
-
 .aboutSection {
   padding: 80px 0;
   background-color: #f9f9f9;
@@ -20,24 +16,24 @@
   text-align: center;
   margin-bottom: 40px;
   color: #333;
-  position: relative; /* ለመስመሩ አቀማመጥ እንድናስተካክል */
+  position: relative;
+  display: inline-block;
 }
 
-/* ይህ ኮድ ከርዕሱ ስር መስመር ለመጨመር ያገለግላል */
 .heading::after {
   content: '';
   width: 100px;
   height: 4px;
   background-color: #007bff;
   position: absolute;
-  bottom: -15px; /* ከርዕሱ በታች እንዲቀመጥ */
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
 }
 
-/* New section for description paragraphs */
 .descriptionSection {
+  text-align: center;
   margin-bottom: 40px;
 }
 
@@ -45,15 +41,15 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
-  text-align: justify;
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }
 
 .skillsAndImageContainer {
   display: flex;
+  align-items: center;
   gap: 50px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .skills {
@@ -61,9 +57,9 @@
 }
 
 .skillsHeading {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
   color: #333;
+  margin-bottom: 20px;
 }
 
 .skillsContainer {
@@ -75,30 +71,27 @@
 .skillItem {
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 .skillName {
-  font-size: 1rem;
   font-weight: bold;
   color: #333;
+  margin-bottom: 5px;
 }
 
 .progressBar {
   width: 100%;
-  height: 25px;
   background-color: #e0e0e0;
   border-radius: 5px;
   overflow: hidden;
+  height: 20px;
   position: relative;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .progress {
   height: 100%;
   background-color: #007bff;
   transition: width 1s ease-in-out;
-  border-radius: 5px;
 }
 
 .percentage {
@@ -106,45 +99,51 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 0.9rem;
   color: #fff;
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-size: 0.9rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .imageContainer {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-shrink: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .aboutImage {
-  max-width: 500px;
-  max-height: 500px;
-  width: auto;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10%;
-  margin-top: 30px;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
-  }
-  border: none;
-  outline: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  
+  display: block;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .skillsAndImageContainer {
     flex-direction: column;
-    align-items: center;
+    gap: 30px;
   }
+
+  .skills {
+    order: 2; /* skills ከምስሉ በታች እንዲሆን */
+  }
+
   .imageContainer {
-    order: -1;
-    margin-bottom: 20px;
+    order: 1; /* ምስሉ ከክህሎት ዝርዝሩ በላይ እንዲሆን */
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutImage {
+    border-radius: 10px;
   }
 }

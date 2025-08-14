@@ -1,25 +1,37 @@
+// src/components/Projects/Projects.jsx
 import React from 'react';
 import styles from './Projects.module.css';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'; // አዶዎችን እንጠቀም
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
-    title: 'Project Alpha',
-    description: 'A responsive e-commerce platform built with React and Node.js. It features user authentication, a shopping cart, and a secure payment gateway.',
-    image: '/project-alpha.png', // የፕሮጀክትህን ምስል መንገድ
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-    githubLink: 'https://github.com/your-username/project-alpha',
-    liveLink: 'https://project-alpha.netlify.app',
+    title: 'PNS (Push Notification System)',
+    description: 'A robust push notification system built with C# and .NET Framework. It leverages Swagger for API documentation and provides a clear, well-structured REST API for sending real-time alerts and messages to users.',
+    technologies: ['C#', '.NET Framework', 'Swagger', 'REST API'],
+    githubLink: 'https://github.com/your-username/pns-system',
+    liveLink: 'https://your-pns-live-demo.netlify.app',
   },
   {
-    title: 'Project Beta',
-    description: 'A social media application with a clean UI, allowing users to share photos and connect with friends. Built with a modern tech stack.',
-    image: '/project-beta.png',
-    technologies: ['React', 'Redux', 'Firebase', 'CSS Modules'],
-    githubLink: 'https://github.com/your-username/project-beta',
-    liveLink: 'https://project-beta.netlify.app',
+    title: 'Student Feedback System',
+    description: 'A platform for collecting and analyzing student feedback on courses and instructors. It provides valuable insights through charts and reports, helping educational institutions to improve their teaching quality.',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
+    githubLink: 'https://github.com/your-username/student-feedback-system',
+    liveLink: 'https://your-feedback-system-live-demo.netlify.app',
   },
-  // ተጨማሪ ፕሮጀክቶችን እዚህ ውስጥ መጨመር ትችላለህ
+  {
+    title: 'Quiz App',
+    description: 'An interactive and engaging quiz application with multiple-choice questions, a timer, and a score tracker. The app is built with a clean user interface and is fully responsive for all devices.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'APIs'],
+    githubLink: 'https://github.com/your-username/quiz-app',
+    liveLink: 'https://your-quiz-app-live-demo.netlify.app',
+  },
+  {
+    title: 'Health Notebook',
+    description: 'A digital health notebook for tracking daily health metrics like food intake, exercise, and mood. It helps users maintain a healthy lifestyle by providing data visualization and personalized reports.',
+    technologies: ['React', 'Redux', 'Firebase', 'CSS Modules'],
+    githubLink: 'https://github.com/your-username/health-notebook',
+    liveLink: 'https://your-health-notebook-live-demo.netlify.app',
+  },
 ];
 
 const Projects = () => {
@@ -30,7 +42,6 @@ const Projects = () => {
         <div className={styles.projectGrid}>
           {projects.map((project, index) => (
             <div key={index} className={styles.projectCard}>
-              <img src={project.image} alt={project.title} className={styles.projectImage} />
               <div className={styles.projectInfo}>
                 <h3 className={styles.projectTitle}>{project.title}</h3>
                 <p className={styles.projectDescription}>{project.description}</p>

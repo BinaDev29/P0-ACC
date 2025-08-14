@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.socialLinks}>
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/BinaDev29" target="_blank" rel="noopener noreferrer">
             <FaGithub className={styles.icon} />
-          </a>
+          </a>git 
           <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className={styles.icon} />
           </a>
@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
         </div>
         <p className={styles.copyright}>
-          &copy; {new Date().getFullYear()} Bini. All Rights Reserved.
+          &copy; {new Date().getFullYear()} . All Rights Reserved.
         </p>
       </div>
     </footer>
